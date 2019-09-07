@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Hextaurant</title>
+  <meta name="keywords" content="Hextaurant">
+  <meta name="description" content="用心製作美味，值得你享受">
+  <script src="js/vendor/adobeFont.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="css/all.css">
+
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+
+  <meta property="og:url" content="https://kayahino.github.io/hexschool-hw/Hextaurant/">
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/kayahino/hexschool-hw/master/Hextaurant/images/Bitmap.png">
+  <meta property="og:title" content="Hextaurant">
+  <meta property="og:description" content="一入口就攻佔你的味蕾">
+</head>
+
+<body>
+  <header class="l-header">
+    <div class="nav">
+      <div class="d-flex align-items-center">
+        <img src="images/icon.svg" alt="Hextaurant" class="nav__icon">
+      </div>
+      <div class="d-flex align-items-center">
+        <ul class="nav__menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cart.html">SHOP</a></li>
+          <li><a href="index.html#reserve">Reserve</a></li>
+        </ul>
+        <a href="login.html" class="btn btn--outlined ml20"><span>Login</span></a>
+        <div class="menu-trigger"><span class="dash"></span></div>
+      </div>
+    </div>
+    <div class="hero">
+      <h2 class="hero__title text-align-center"><span>一入口</span>就攻佔你的味蕾</h2>
+      <div class="subtitle-m hero__caption text-align-center mt15">
+        <p>絶對無法錯過的好滋味</p>
+      </div>
+    </div>
+  </header>
+  <main class="l-content loginPage">
+    <section>
+      <div class="title text-align-center">
+        <h3 class="mb10">六角西餐廳</h3>
+        <p class="subtitle-m text-align-center">享受美食好味道</p>
+      </div>
+      <div class="main-container">
+        <div class="inner-wrapper login-form">
+          <form action="#">
+            <h4>Log in</h4>
+            <div class="input input--outline">
+              <input type="email" placeholder="Email">
+              <div class="line"></div>
+              <label class="label">Email</label>
+            </div>
+            <div class="input input--outline">
+              <input type="password" placeholder="Password">
+              <div class="line"></div>
+              <label class="label">Password</label>
+            </div>
+            <div class="helper-text"><a href="#">Forgot your password?</a></div>
+            <div class="d-flex">
+              <button class="btn btn--primary mr20">
+                <span>Log in</span>
+              </button>
+              <button class="btn btn--secondary signup-btn">
+                <span>Sign up</span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="inner-wrapper signup-form">
+          <form action="#">
+            <h4>Sign up</h4>
+            <div class="input input--outline">
+              <input type="email" placeholder="Email">
+              <div class="line"></div>
+              <label class="label">Email</label>
+            </div>
+            <div class="input input--outline">
+              <input type="password" placeholder="Password">
+              <div class="line"></div>
+              <label class="label">Password</label>
+            </div>
+            <div class="helper-text">See our <a href="#">Privacy Policy</a></div>
+            <div class="d-flex">
+              <button class="btn btn--primary mr20">
+                <span>Sign Up</span>
+              </button>
+              <button class="btn btn--secondary login-btn">
+                <span>Log in</span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="overlay-clip">
+          <div class="overlay">
+
+            <div class="overlay__panel overlay--left">
+              <h4>Hello <span>New Friend!</span></h4>
+              <p style="font-weight: 700">Already have an account?</p>
+              <p>Login with your account to keep connected with us.</p>
+              <button class="btn btn--outlined login-btn">
+                <span>Log in</span>
+              </button>
+            </div>
+            <div class="overlay__panel overlay--right">
+              <h4>Welcome <span>Back!</span></h4>
+              <p style="font-weight: 700">Don't have an account?</p>
+              <p>Enter your personal details and start journey with us.</p>
+              <button class="btn btn--outlined signup-btn">
+                <span>Sign up</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+ 	<footer class="l-footer" id="footer">
+    <div class="row">
+      <div class="col-8 footer__info">
+        <div class="about mr20">
+          <h3>關於 Hextaurant</h3>
+          <p><span style="font-weight: 700">Hextaurant</span> 名字結合了六角形的字首發音與餐廳 <span class="underline">restaurant</span> 的法文發音，期望能有法國餐廳的浪漫優雅。</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, dignissimos.</p>
+        </div>
+        <div class="contact">
+          <h3>聯絡方式</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt pr5"></i> 高雄市中正五路到底</li>
+            <li><i class="fas fa-phone"></i> +886 012 3456</li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:service@hexschool.com">service@hexschool.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-4 footer__sns" style="align-self: stretch">
+        <div class="d-flex align-items-center justify-content-end" style="height: 100%">
+          <img src="images/icon.svg" alt="Hextaurant" class="footer__icon">
+          <span class="footer__sns--gplus"><a href="#"><i class="fab fa-google-plus-square"></i></a></span>
+          <span class="footer__sns--twitter"><a href="#"><i class="fab fa-twitter-square"></i></a></span>
+          <span class="footer__sns--facebook"><a href="#"><i class="fab fa-facebook-square"></i></a></span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright text-align-center">
+      <p>Made with <i class="fas fa-heart"></i> by <a href="https://github.com/kayahino/hexschool-hw/tree/master/BMI" target="_blank">CLEO</a> in Aug 2019</p>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/login.js"></script>
+</body>
+
+</html>

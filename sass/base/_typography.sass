@@ -1,0 +1,56 @@
+h2
+  @include set-font(kan48typos-std, floor($body-font-size*2.25), 3px)
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.7)
+  @include media($mobile-small)
+    @include set-font(kan48typos-std, floor($body-font-size*2), 3px)
+  
+h3
+  @include set-font(kan412typos-std, floor($body-font-size*1.5), 1.5px)
+  
+h4
+  @include set-font(kan412typos-std, floor($body-font-size*1.25), 1.5px)
+
+h5
+  @include set-font(kan412typos-std, floor($body-font-size*1.25), 0)
+
+%title
+  margin: 0
+  font-weight: normal
+
+@for $i from 1 through 5
+  h#{$i}
+    @extend %title
+  
+  
+.subtitle-m
+  @include set-font(kan48typos-std, floor($body-font-size*1.15), 1.2px)
+  line-height: 180%
+
+.subtitle-s
+  @include set-font(source-han-sans-traditional, floor($body-font-size*0.9), 0.1px)
+  font-weight: 400
+  
+.caption, .helper-text
+  @include set-font(source-han-sans-traditional, floor($body-font-size*0.9), 0.7px)
+  font-weight: 300
+  color: $color-em
+  white-space: nowrap
+  > a
+    color: $color-em
+    &:hover
+      text-decoration: underline
+
+.nav__menu
+  @include set-font(lato, $body-font-size, 2.5px)
+  font-weight: 700
+  text-transform: uppercase
+
+.btn
+  @include set-font(lato, floor($body-font-size*0.9), 1.75px)
+  font-weight: 600
+  text-transform: uppercase
+  
+input, textarea
+  @include set-font(source-han-sans-traditional, $body-font-size, 0.15px)
+  font-weight: 400
+  

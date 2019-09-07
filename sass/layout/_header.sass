@@ -1,0 +1,158 @@
+.l-header
+  width: 100%
+  height: 42rem
+  max-height: 100%
+  color: #fff
+  background: linear-gradient(to bottom, rgba(0,0,0,0.01) 70%, rgba(0,0,0,0.3)), url($header-img) no-repeat 0 70% / cover
+  position: relative
+  @include media($mobile)
+    background-size: 260%
+    
+.nav
+  display: flex
+  align-items: center
+  justify-content: space-between
+  background-color: darken($color-secondary, 20%)
+  padding: 0 3rem
+  position: relative
+  top: 0
+  z-index: 10
+  height: fit-content
+  min-height: 60px
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25)
+  &.sticky
+    width: 100%
+    z-index: 100
+    position: fixed
+    top: 0
+    transform: translate3d(0, -80px, 0)
+    transition: transform 0.4s ease
+    will-change: transform
+  &.sticky.scroll
+    transform: translate3d(0, 0, 0)
+  &__icon
+    width: 40px
+    margin-right: 15px
+    cursor: pointer
+  &__logo
+    height: 2.4rem
+    width: 12rem
+    cursor: pointer
+    background-image: url($header-logo)
+    background-repeat: no-repeat
+    background-size: contain
+    @include h1-with-logo
+    @include media($mobile)
+      display: none
+
+  .btn
+    padding: 8px 20px
+    &:active
+      transform: scale(0.95)
+  &__menu
+    display: inline-block
+    @include media($mobile)
+      display: none
+      height: fit-content
+      position: absolute
+      top: 100%
+      left: 0
+      right: 0
+      text-align: center
+      overflow: hidden
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25)
+      transform: translateZ(0)
+    > li
+      display: inline-block
+      transition: background 0.2s linear
+      @include media($mobile)
+        display: block
+        background-color: darken($color-secondary, 20%)
+        border-top: 1px solid rgba(#fff, 0.5)
+      &:hover
+        background-color: rgba(#fff, 0.15)
+        @include media($mobile)
+          background-color: darken($color-secondary, 20%)
+    a
+      display: block
+      padding: 1.5rem 2rem
+      color: rgba(255, 255, 255, 0.95)
+      @include media($mobile)
+        padding: 2rem 0
+
+      
+
+.menu-trigger
+  width: 44px
+  height: 44px
+  position: relative
+  display: none
+  margin-left: 20px
+  @include media($mobile)
+    display: block
+  &:hover:not(.active) .dash
+    &::before
+      top: -11px
+    &::after
+      top: 11px
+  &.active
+    .dash
+      background-color: transparent
+      &::before
+        height: 2px
+        transform: rotate(-44deg)
+      &::after
+        height: 2px
+        transform: rotate(44deg)
+    
+    
+.dash
+  display: inline-block
+  height: 4px
+  width: 30px
+  background-color: #fff
+  border-radius: 1px
+  position: absolute
+  top: 50%
+  right: 0
+  transform: translateY(-50%)
+  pointer-events: none
+  &::before, &::after
+    content: ''
+    height: 4px
+    width: 30px
+    background-color: #fff
+    border-radius: 1px
+    display: block
+    position: absolute
+    transform-origin: right center
+    transition: all 0.2s ease
+  &::before
+    top: -10px
+  &::after
+    top: 10px
+    
+        
+        
+.hero
+  max-width: 50rem
+  width: 100%
+  padding: 20px
+  margin: 0 auto
+  position: absolute
+  top: calc(50% + 28px)
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: rgba(209, 209, 209, 0.2)
+  @include flex-centralize(column)
+  &__title
+    > span
+      @include media($mobile)
+        display: block
+  .reverse
+    transform: scaleX(-1)
+  &__caption
+    text-shadow: 0 0 3px rgb(0, 0, 0)
+    span
+      color: $color-em
+      font-weight: 700

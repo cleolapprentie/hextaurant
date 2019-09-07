@@ -1,0 +1,58 @@
+$gutter: 6rem
+$grid-num: 12
+
+.container
+  max-width: $max-width
+  width: 90vw
+  margin: 0 auto
+  padding-left: $gutter / 2
+  padding-right: $gutter / 2
+  @include media($mobile)
+    width: 98vw
+
+.inner-container
+  width: 100%
+  margin: 0 auto
+  display: flex
+  flex-wrap: wrap
+  padding-left: $gutter / 4
+  padding-right: $gutter / 4
+  @include media($mobile)
+    padding-left: 0
+    padding-right: 0
+  
+.row
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-start
+  margin-left: -($gutter / 2)
+  margin-right: -($gutter /2)
+    
+%col
+  padding-left: $gutter / 2
+  padding-right: $gutter / 2
+
+%col-inner
+  padding-left: $gutter / 4
+  padding-right: $gutter / 4
+
+@for $i from 1 through $grid-num
+  .col-#{$i}
+    @extend %col
+    @include set-column($i)
+    @include media($mobile)
+      max-width: 100%!important
+      flex: 0 0 100%!important
+      &:not(:last-child)
+        margin-bottom: $gutter!important
+  .inner-container .col-#{$i}
+    @extend %col-inner
+    @include media($screen-small)
+      max-width: 50%
+      flex: 0 0 50%
+    @include media($mobile)
+      padding-left: $gutter / 2
+      padding-right: $gutter / 2
+    &:not(:last-child)
+      margin-bottom: $gutter / 2
+    

@@ -1,0 +1,79 @@
+.feature
+  &__img
+    margin: 0 auto
+    width: 20rem
+    height: calc(20rem - (20rem * 0.0735))
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%)
+  &__card
+    @include flex-centralize(column)
+    filter: drop-shadow(0 3px 5px rgba(#000, 0.2))
+  &__title
+    margin: 1.5rem 0
+  &__description
+      text-align: justify
+      word-break: break-all
+  
+.chef
+  padding: 0
+  color: darken(#fff, 10%)
+  background-color: #000a12!important
+  &-wrap
+    width: 90vw
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    @include media($tablet)
+      flex-direction: column
+      width: 100vw
+      
+  .title
+    display: none
+  &__img
+    width: 100%
+    min-height: 300px
+    background: url($today-chef) no-repeat center center / cover
+  
+  &__info
+    margin: auto
+    padding: 0 5rem
+    @include media($tablet)
+      padding: 6rem 3.5rem
+
+  
+.reserve
+  @include media($tablet)
+    .col-5, .col-7
+      max-width: 100%
+      flex: 0 0 100%
+  .caption > span
+    @include media($mobile-small)
+      display: block
+  &__map
+    height: 38rem
+    > iframe
+      width: 100%
+      height: 100%
+      border: 1px solid #eee
+  &__form
+    @include media($tablet)
+      margin-top: 6rem
+      
+.totop
+  @include circle-obj(45px)
+  background-color: $color-primary
+  position: fixed
+  bottom: 15px
+  right: 15px
+  visibility: visible
+  opacity: 0.8
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4)
+  transition: all 0.3s
+  cursor: pointer
+  transform: translateZ(0)
+  &:after
+    color: #fff
+    font-size: 22px
+    @include fontAwesome('\f062', 900)
