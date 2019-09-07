@@ -1,5 +1,4 @@
 # Hextaurant
-> 六角學院 RWD課程最終作業
 
 ## 使用技術
 - Sass
