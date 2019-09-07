@@ -7,7 +7,7 @@
 - Grid System
 
 ## Demo
-https://kayahino.github.io/hexschool-hw/Hextaurant/
+https://kayahino.github.io/hextaurant
 
 ## 自我突破
 
