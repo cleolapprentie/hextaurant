@@ -1,5 +1,4 @@
 # Hextaurant
-> 六角學院 RWD課程最終作業
 
 ## 使用技術
 - Sass
@@ -8,7 +7,7 @@
 - Grid System
 
 ## Demo
-https://kayahino.github.io/hexschool-hw/Hextaurant/
+https://kayahino.github.io/hextaurant
 
 ## 自我突破
 
